@@ -1,0 +1,63 @@
+.products {
+	padding-top: 127px;
+	padding-bottom: 119px;
+}
+
+.products-article {
+	font-family: Titan One;
+	@include font(30px, null, 1.13, 0.04em);
+	text-align: center;
+	color: var(--title-label);
+	margin-bottom: 15px;
+}
+.products-title {
+	font-family: Titan One;
+	@include font(58px, null, 1.14, 0.06em);
+	text-align: center;
+	color: var(--main-accent-color);
+	margin-bottom: 49px;
+}
+.product-list {
+	display: flex;
+	justify-content: center;
+}
+.product-list__item {
+	padding-top: 163px;
+	padding-bottom: 50px;
+	width: 329px;
+	height: 525px;
+	border-radius: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.product-list__item--cream {
+	background-color: var(--background-color);
+	margin-right: 29px;
+}
+.product-list__item--coffee {
+	background-color: var(--background-color-coffee);
+	margin-right: 30px;
+}
+.product-list__item--shakes {
+	background-color: var(--background-color-shakes);
+}
+.product-list__title {
+	font-family: Titan One;
+	@include font(30px, null, 1.13, 0.04em);
+	text-align: center;
+	color: var(--main-white-color);
+	margin-bottom: 32px;
+}
+.product-list__article {
+	@include font(16px, bold, 1.8, 0.04em);
+	text-align: center;
+	color: var(--main-white-color);
+	padding-left: 44px;
+	padding-right: 44px;
+	margin-bottom: 62px;
+}
+.products-button {
+	width: 40px;
+	height: 40px;
+}
