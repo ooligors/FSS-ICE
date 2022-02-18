@@ -1,0 +1,72 @@
+.slider {
+	&__img {
+		margin-bottom: 29px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__text-box {
+		position: relative;
+		background-color: var(--slider-background);
+
+		width: 100%;
+		padding: 48px 50px 20px 50px;
+		margin-bottom: 30px;
+	}
+	&__double-quote {
+		position: absolute;
+		top: 28px;
+		left: 61px;
+
+		fill: var(--double-quote);
+
+		z-index: 1;
+	}
+	&__text {
+		position: relative;
+
+		font-family: 'DM Sans', sans-serif;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: calc(30.6 / 12);
+		text-align: center;
+
+		color: var(--main-black-color);
+
+		z-index: 2;
+	}
+	&__underline {
+		padding-left: 9px;
+		padding-right: 14px;
+		background: linear-gradient(transparent 30px, var(--double-quote) 30px);
+		background-size: 100% 31px;
+		border-bottom: 1px solid var(--double-quote);
+	}
+	&__divider {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+	}
+	&__customer-name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 186%;
+		text-align: center;
+		color: var(--main-black-color);
+
+		margin-bottom: 30px;
+	}
+}
+.slick-dots li button:before {
+	width: 12px;
+	height: 12px;
+	content: '';
+	background-image: url(../images/gray-ellipse.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slick-dots li.slick-active button:before {
+	background-image: url(../images/home.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
