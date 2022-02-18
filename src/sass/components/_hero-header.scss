@@ -1,15 +1,17 @@
 .header-container {
-	background-color: var(--background-color);
-	width: 100%;
-}
-
-.header-container-body {
 	position: relative;
+	overflow: hidden;
 	margin: 0 auto;
-	max-width: 480px;
 	height: 502px;
 	padding: 6px 20px 0px 20px;
-	overflow: hidden;
+	@include tab {
+		padding: 37px 34px 0px 34px;
+		height: 399px;
+	}
+}
+.header {
+	background-color: var(--background-color);
+	width: 100%;
 }
 
 .page-nav {
@@ -32,6 +34,10 @@
 	top: 193px;
 	left: 20px;
 	z-index: 2;
+	@include tab {
+		top: 102px;
+		left: 34px;
+	}
 }
 .hero-container__title {
 	font-family: Titan One, sans-serif;
@@ -39,6 +45,9 @@
 	@include font(26px, 400, 1.15, 0.04em);
 	color: var(--main-white-color);
 	padding-bottom: 19px;
+	@include tab {
+		@include font(22px, 400, 1.14, 0.04em);
+	}
 }
 
 .hero-container__title--accent {
@@ -46,13 +55,30 @@
 	text-transform: uppercase;
 	@include font(48px, 400, 0.97, 0.02em);
 	color: var(--main-accent-color);
+	@include tab {
+		@include font(34px, 400, 0.91, 0.02em);
+	}
 }
 
 .hero-picture {
 	position: absolute;
 	right: 32px;
 	bottom: 0;
-	z-index: 1;
+	z-index: 2;
+	@include tab {
+		right: 247px;
+	}
+}
+
+.hero-picture-girl {
+	display: none;
+	@include tab {
+		display: block;
+		position: absolute;
+		right: 34px;
+		bottom: 0;
+		z-index: 1;
+	}
 }
 
 .ellipse {
@@ -63,6 +89,12 @@
 	width: 346px;
 	height: 344px;
 	border-radius: 50%;
+	@include tab {
+		right: 137px;
+		bottom: 46px;
+		width: 324px;
+		height: 322px;
+	}
 }
 
 .hero__btn {
