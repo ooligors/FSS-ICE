@@ -6,16 +6,31 @@
 .header-container-body {
 	position: relative;
 	margin: 0 auto;
-	max-width: 320px;
+	max-width: 480px;
 	height: 502px;
 	padding: 6px 20px 0px 20px;
 	overflow: hidden;
 }
 
+.page-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__btn {
+		width: 20px;
+		height: 12px;
+	}
+	&__burger {
+		width: 20px;
+		height: 12px;
+		vertical-align: top;
+	}
+}
+
 .hero-container {
 	position: absolute;
 	top: 193px;
-	left: 20;
+	left: 20px;
 	z-index: 2;
 }
 .hero-container__title {
@@ -23,9 +38,10 @@
 	text-transform: uppercase;
 	@include font(26px, 400, 1.15, 0.04em);
 	color: var(--main-white-color);
+	padding-bottom: 19px;
 }
 
-.hero-container__title--active {
+.hero-container__title--accent {
 	font-family: Titan One, sans-serif;
 	text-transform: uppercase;
 	@include font(48px, 400, 0.97, 0.02em);
@@ -41,10 +57,30 @@
 
 .ellipse {
 	position: absolute;
-	left: 36px;
+	right: -62px;
 	bottom: 75px;
 	background-color: var(--title-label);
 	width: 346px;
 	height: 344px;
 	border-radius: 50%;
+}
+
+.hero__btn {
+	width: 83px;
+	height: 24px;
+	background-color: var(--main-white-color);
+	color: var(--main-accent-color);
+	border-radius: 20px;
+	@include font(8px, 400, 1.25, null);
+	text-align: center;
+	&--accent {
+		width: 83px;
+		height: 24px;
+		background-color: var(--main-accent-color);
+		color: var(--main-white-color);
+		border-radius: 20px;
+		@include font(8px, 400, 1.25, null);
+		text-align: center;
+		margin-right: 8px;
+	}
 }

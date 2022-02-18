@@ -3,8 +3,15 @@
         <div class="header-container-body">        
             <nav class="page-nav">
                 <a href="" class="header-logo">
-                    <img src="./images/logo.png" alt="logo">
+                    <img srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+                    src="./images/logo.png"
+                    alt="logo">
                 </a>
+                <button type="button" class="page-nav__btn">
+                    <svg class="page-nav__burger">
+                    <use href="./images/icons.svg#burger"></use>
+                    </svg>
+                </button>
                 <!-- <ul class="site-nav list">
                     <li class="site-nav__item"><a href="" class="site-nav__link site-nav__item--active">Home</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">Contact</a></li>
@@ -16,8 +23,8 @@
             </nav>
             <section class="hero">
                 <div class="hero-container">
-                    <h1 class="hero-container__title">ice cream<br>made with <span class="hero-container__title--active">passion</span></h1>
-                    <button type="button" class="hero__btn">Products</button>
+                    <h1 class="hero-container__title">ice cream<br>made with<br><span class="hero-container__title--accent">passion</span></h1>
+                    <button type="button" class="hero__btn--accent">Products</button>
                     <button type="button" class="hero__btn">How it’s made?</button>
                 </div>
                 <picture class="hero-picture">
@@ -25,7 +32,7 @@
                     <source srcset="./images/hero-icecream-tab@1x.png 1x, ./images/hero-icecream-tab@2x.png 2x"
                         media="(min-width: 768px)" />
                     <source srcset="./images/hero-icecream-mob@1x.png 1x, ./images/hero-icecream-mob@2x.png 2x" media="(min-width: 320px)" />
-                    <img src="./images/hero-icecream-desk@1x.png" alt="icecream">
+                    <img src="./images/hero-icecream-mob@1x.png" alt="icecream">
                 </picture>
                 <div class="ellipse"></div>            
                 <!-- <div>
