@@ -1,0 +1,50 @@
+.header-container {
+	background-color: var(--background-color);
+	width: 100%;
+}
+
+.header-container-body {
+	position: relative;
+	margin: 0 auto;
+	max-width: 320px;
+	height: 502px;
+	padding: 6px 20px 0px 20px;
+	overflow: hidden;
+}
+
+.hero-container {
+	position: absolute;
+	top: 193px;
+	left: 20;
+	z-index: 2;
+}
+.hero-container__title {
+	font-family: Titan One, sans-serif;
+	text-transform: uppercase;
+	@include font(26px, 400, 1.15, 0.04em);
+	color: var(--main-white-color);
+}
+
+.hero-container__title--active {
+	font-family: Titan One, sans-serif;
+	text-transform: uppercase;
+	@include font(48px, 400, 0.97, 0.02em);
+	color: var(--main-accent-color);
+}
+
+.hero-picture {
+	position: absolute;
+	right: 32px;
+	bottom: 0;
+	z-index: 1;
+}
+
+.ellipse {
+	position: absolute;
+	left: 36px;
+	bottom: 75px;
+	background-color: var(--title-label);
+	width: 346px;
+	height: 344px;
+	border-radius: 50%;
+}
