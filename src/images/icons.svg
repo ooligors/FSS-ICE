@@ -32,6 +32,9 @@
             <circle cx="2" cy="2" r="2" fill="#C7133E"/>
             <circle cx="30" cy="2" r="2" fill="#C7133E"/>
         </symbol>
+        <symbol id="icon-pointer" viewBox="0 0 26 32">
+            <path d="M5.171 3.2l14.17 12.8-14.17 12.8"></path>
+        </symbol>
     </svg>
 </defs>
 </svg>

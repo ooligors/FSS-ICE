@@ -1,0 +1,157 @@
+.about__container {
+	padding-top: 125px;
+	padding-bottom: 39px;
+
+	width: 100%;
+
+	background-color: #fff5f6;
+
+	background-image: url('../images/about-milk-mob@1x.png');
+	background-repeat: no-repeat;
+	background-position: 0% 85%;
+	background-size: 100% 133px;
+
+	@include x2() {
+		background-image: url('../images/about-milk-mob@1x.png');
+	}
+
+	@include mob() {
+		max-width: 480px;
+	}
+
+	@include tab() {
+		padding-top: 130px;
+		padding-bottom: 66px;
+
+		max-width: 768px;
+
+		background-image: none;
+	}
+}
+
+.about__label {
+	margin-bottom: 15px;
+
+	font-family: 'Titan One', sans-serif;
+	@include font($fs: 18px, $fw: null, $lh: 1.17, $ls: null);
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: var(--title-label);
+
+	@include tab() {
+		@include font($fs: 26px, $fw: null, $lh: 1.15, $ls: null);
+	}
+}
+
+.about__title {
+	padding-left: 45px;
+	padding-right: 45px;
+
+	// margin-left: auto;
+	// margin-right: auto;
+	margin-bottom: 26px;
+
+	// width: 200px;
+
+	font-family: 'Titan One', sans-serif;
+	@include font($fs: 34px, $fw: null, $lh: 1.15, $ls: null);
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: var(--main-accent-color);
+
+	@include tab() {
+		margin-bottom: 50px;
+
+		@include font($fs: 48px, $fw: null, $lh: null, $ls: null);
+	}
+}
+
+.about-box {
+	@include tab() {
+		display: flex;
+		// justify-content: center;
+		align-items: flex-end;
+	}
+}
+
+.about__image {
+	// justify-content: center;
+	// display: flex;
+
+	margin-bottom: 46px;
+	width: 100%;
+
+	@include tab() {
+		width: 340px;
+		height: 339px;
+	}
+}
+
+.about-text-box {
+	padding-left: 35px;
+	padding-right: 35px;
+
+	@include tab() {
+		padding: 0;
+		width: 50%;
+
+		margin-left: 17px;
+		margin-right: 21px;
+	}
+}
+
+.about__text {
+	width: 100%;
+	// margin-left: auto;
+	// margin-right: auto;
+
+	@include font($fs: 12px, $fw: 500, $lh: 1.58, $ls: null);
+
+	@include tab() {
+		@include font($fs: 14px, $fw: null, $lh: 1.79, $ls: null);
+	}
+}
+
+.about__text--uppend {
+	margin-bottom: 47px;
+
+	@include tab() {
+		margin-bottom: 30px;
+	}
+}
+
+.about__text--accent-color {
+	margin-bottom: 26px;
+	color: var(--main-gray-color);
+
+	@include tab() {
+		margin-bottom: 62px;
+	}
+}
+
+.about__button {
+	padding: 18px 37px;
+
+	@include font($fs: 14px, $fw: bold, $lh: 1.29, $ls: null);
+
+	align-items: center;
+	text-align: center;
+
+	border-radius: 22px;
+
+	color: #d41443;
+	background-color: var(--main-white-color);
+
+	&:hover,
+	&:focus {
+		background-color: #ecebeb;
+	}
+
+	&::after {
+		content: '';
+	}
+}
