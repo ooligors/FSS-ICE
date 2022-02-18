@@ -27,5 +27,8 @@
 <symbol id="gray-ellipse" viewBox="0 0 35 32">
 <path d="M33.053 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
 </symbol>
+<symbol id="icon-pointer" viewBox="0 0 26 32">
+<path d="M5.171 3.2l14.17 12.8-14.17 12.8"></path>
+</symbol>
 </defs>
 </svg>
