@@ -1,10 +1,23 @@
-.about__container {
+.about {
 	padding-top: 125px;
 	padding-bottom: 39px;
 
+	background-color: #fff5f6;
+
+	@include tab() {
+		padding-top: 130px;
+		padding-bottom: 66px;
+	}
+
+	@include desk() {
+		padding: 125px 100px 39px 100px;
+	}
+}
+
+.about__container {
 	width: 100%;
 
-	background-color: #fff5f6;
+	// background-color: #fff5f6;
 
 	background-image: url('../images/about-milk-mob@1x.png');
 	background-repeat: no-repeat;
@@ -20,12 +33,18 @@
 	}
 
 	@include tab() {
-		padding-top: 130px;
-		padding-bottom: 66px;
-
 		max-width: 768px;
 
 		background-image: none;
+	}
+
+	@include desk() {
+		max-width: 1280px;
+
+		background-image: url('../images/about-milk-desk@1x.png');
+		background-repeat: no-repeat;
+		background-position: 0% 107%;
+		background-size: 100% 534px;
 	}
 }
 
@@ -43,17 +62,17 @@
 	@include tab() {
 		@include font($fs: 26px, $fw: null, $lh: 1.15, $ls: null);
 	}
+
+	@include desk() {
+		@include font($fs: 30px, $fw: null, $lh: 1.13, $ls: null);
+	}
 }
 
 .about__title {
 	padding-left: 45px;
 	padding-right: 45px;
 
-	// margin-left: auto;
-	// margin-right: auto;
 	margin-bottom: 26px;
-
-	// width: 200px;
 
 	font-family: 'Titan One', sans-serif;
 	@include font($fs: 34px, $fw: null, $lh: 1.15, $ls: null);
@@ -68,26 +87,38 @@
 
 		@include font($fs: 48px, $fw: null, $lh: null, $ls: null);
 	}
+
+	@include desk() {
+		margin-bottom: 55px;
+
+		@include font($fs: 58px, $fw: null, $lh: 1.14, $ls: 0.06em);
+	}
 }
 
 .about-box {
 	@include tab() {
 		display: flex;
-		// justify-content: center;
-		align-items: flex-end;
+		align-items: flex-start;
+	}
+	@include desk() {
+		justify-content: center;
 	}
 }
 
 .about__image {
-	// justify-content: center;
-	// display: flex;
-
 	margin-bottom: 46px;
 	width: 100%;
 
 	@include tab() {
 		width: 340px;
 		height: 339px;
+
+		margin-bottom: 0;
+	}
+
+	@include desk() {
+		width: 516px;
+		height: 516px;
 	}
 }
 
@@ -102,12 +133,17 @@
 		margin-left: 17px;
 		margin-right: 21px;
 	}
+
+	@include desk() {
+		margin-left: 0;
+		margin-right: 0;
+
+		padding: 51px 0px 107px 74px;
+	}
 }
 
 .about__text {
 	width: 100%;
-	// margin-left: auto;
-	// margin-right: auto;
 
 	@include font($fs: 12px, $fw: 500, $lh: 1.58, $ls: null);
 
@@ -116,25 +152,37 @@
 	}
 }
 
-.about__text--uppend {
+.about__text--prepend {
 	margin-bottom: 47px;
 
 	@include tab() {
 		margin-bottom: 30px;
 	}
-}
 
-.about__text--accent-color {
-	margin-bottom: 26px;
-	color: var(--main-gray-color);
-
-	@include tab() {
-		margin-bottom: 62px;
+	@include desk() {
+		@include font($fs: 16px, $fw: null, $lh: 1.75, $ls: null);
 	}
 }
 
+.about__text--accent-color {
+	margin-bottom: 12px;
+	color: var(--main-gray-color);
+
+	@include desk() {
+		@include font($fs: 14px, $fw: null, $lh: 1.93, $ls: null);
+	}
+}
+
+.about__text--uppend {
+	margin-bottom: 26px;
+}
+
 .about__button {
-	padding: 18px 37px;
+	display: flex;
+	justify-content: center;
+
+	width: 176px;
+	height: 44px;
 
 	@include font($fs: 14px, $fw: bold, $lh: 1.29, $ls: null);
 
@@ -152,6 +200,9 @@
 	}
 
 	&::after {
-		content: '';
+		content: '>';
+
+		margin-left: 14px;
+		font-size: 17px;
 	}
 }
