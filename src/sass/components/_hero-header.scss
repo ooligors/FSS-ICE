@@ -8,6 +8,10 @@
 		padding: 37px 34px 0px 34px;
 		height: 399px;
 	}
+	@include desk {
+		padding: 37px 74px 0px 74px;
+		height: 665px;
+	}
 }
 .header {
 	background-color: var(--background-color);
@@ -44,7 +48,10 @@
 		border-radius: 22px;
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
-			display: block;
+			display: flex;
+			align-items: center;
+			padding-left: 37px;
+			padding-right: 37px;
 			position: relative;
 		}
 		&::after {
@@ -52,7 +59,7 @@
 			font-size: 12px;
 			position: absolute;
 			top: 15px;
-			right: 24px;
+			right: 37px;
 			color: var(--main-accent-color);
 		}
 	}
@@ -97,6 +104,9 @@
 	@include tab {
 		right: 247px;
 	}
+	@include desk {
+		right: 410px;
+	}
 }
 
 .hero-picture-girl {
@@ -108,6 +118,9 @@
 		bottom: 0;
 		z-index: 4;
 	}
+	@include desk {
+		right: 74px;
+	}
 }
 
 .hero-picture-milk {
@@ -117,6 +130,10 @@
 		position: absolute;
 		left: 34px;
 		bottom: 28px;
+	}
+	@include desk {
+		left: 74px;
+		bottom: 45px;
 	}
 }
 
@@ -133,6 +150,12 @@
 		bottom: 45px;
 		width: 322px;
 		height: 322px;
+	}
+	@include desk {
+		right: 227px;
+		bottom: 75px;
+		width: 538px;
+		height: 538px;
 	}
 }
 
@@ -163,6 +186,10 @@
 	position: absolute;
 	top: 96px;
 	right: 44px;
+	@include desk {
+		top: 160px;
+		right: 92px;
+	}
 	&::after {
 		content: '';
 		position: absolute;
@@ -172,6 +199,12 @@
 		height: 16px;
 		border-radius: 50%;
 		background-color: var(--main-white-color);
+		@include desk {
+			top: -4px;
+			right: -18px;
+			width: 30px;
+			height: 30px;
+		}
 	}
 }
 
@@ -182,13 +215,17 @@
 	}
 }
 
-.hero-inform__26 {
+.hero-inform__23 {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	position: absolute;
 	top: 152px;
 	right: 42px;
+	@include desk {
+		top: 248px;
+		right: 92px;
+	}
 	&::after {
 		content: '';
 		position: absolute;
@@ -198,23 +235,51 @@
 		height: 16px;
 		border-radius: 50%;
 		background-color: var(--main-white-color);
+		@include desk {
+			top: -3px;
+			right: -18px;
+			width: 30px;
+			height: 30px;
+		}
 	}
 }
 
 .hero-inform__number {
 	z-index: 2;
+	text-transform: uppercase;
 	font-family: Titan One, sans-serif;
 	@include font(28px, 400, 1.14, 0.04em);
 	color: var(--main-accent-color);
+	@include desk {
+		@include font(46px, 400, 1.15, 0.04em);
+	}
 }
 
 .hero-inform__text {
 	@include font(8px, 400, 1.25, 0.04em);
 	color: var(--main-white-color);
+	@include desk {
+		@include font(14px, 400, 1.29, 0.04em);
+	}
 }
 
 .header-title {
 	display: none;
+	@include tab {
+		position: absolute;
+		left: 154px;
+		bottom: 59px;
+		display: block;
+		width: 114px;
+		@include font(8px, 400, 1.5, 0.04em);
+		color: var(--main-white-color);
+	}
+	@include desk {
+		left: 292px;
+		bottom: 102px;
+		width: 200px;
+		@include font(14px, 400, 1.4, 0.04em);
+	}
 	&::after {
 		content: '';
 		position: absolute;
@@ -224,6 +289,11 @@
 		height: 18px;
 		border-radius: 50%;
 		background-color: var(--main-white-color);
+		@include desk {
+			width: 26px;
+			height: 26px;
+			bottom: -46px;
+		}
 	}
 	&::before {
 		content: '\2794';
@@ -233,14 +303,10 @@
 		bottom: -23px;
 		left: 5px;
 		z-index: 1;
-	}
-	@include tab {
-		position: absolute;
-		left: 154px;
-		bottom: 59px;
-		display: block;
-		width: 114px;
-		@include font(8px, 400, 1.5, 0.04em);
-		color: var(--main-white-color);
+		@include desk {
+			font-size: 14px;
+			bottom: -43px;
+			left: 7px;
+		}
 	}
 }
