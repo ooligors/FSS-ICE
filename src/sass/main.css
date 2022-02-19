@@ -445,7 +445,7 @@ button {
   content: '';
   display: block;
   position: relative;
-  width: auto;
+  width: 179px;
   height: 1px;
   bottom: -25px;
   border-radius: 2px;
@@ -455,6 +455,7 @@ button {
 @media screen and (min-width: 768px) {
   .contacts__coments::after {
     bottom: -30px;
+    width: auto;
   }
 }
 
@@ -596,6 +597,13 @@ button {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__contacts {
+    background-image: -webkit-gradient(linear, left top, right top, from(0deg), color-stop(85%, #fff5f6), color-stop(20%, white)), url("../images/contacts-spots@1x.png");
+    background-image: linear-gradient(to right, 0deg, #fff5f6 85%, white 20%), url("../images/contacts-spots@1x.png");
   }
 }
 /*# sourceMappingURL=main.css.map */
