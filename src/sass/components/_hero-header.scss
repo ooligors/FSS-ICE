@@ -53,11 +53,6 @@
 		transition-property: background-color;
 		transition-duration: var(--primary-transition-duration);
 		transition-timing-function: var(--primary-transition-timing-function);
-		animation-name: BgColor;
-		animation-duration: 2s;
-		animation-delay: 4s;
-		animation-iteration-count: 2;
-		animation-timing-function: var(--primary-transition-timing-function);
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
 			display: flex;
@@ -79,20 +74,6 @@
 .page-nav__btn:focus,
 .page-nav__btn:hover {
 	background-color: var(--secondary-gray-color);
-}
-
-@keyframes BgColor {
-	0% {
-		background-color: var(--main-white-color);
-	}
-
-	50% {
-		background-color: var(--non-accent-color);
-	}
-
-	100% {
-		background-color: var(--main-white-color);
-	}
 }
 
 .site-nav {
