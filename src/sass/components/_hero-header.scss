@@ -8,8 +8,13 @@
 		padding: 37px 34px 0px 34px;
 		height: 399px;
 	}
+	@include desk {
+		padding: 37px 74px 0px 74px;
+		height: 665px;
+	}
 }
-.header {
+
+.hero-header {
 	background-color: var(--background-color);
 	width: 100%;
 }
@@ -34,6 +39,9 @@
 		width: 20px;
 		height: 12px;
 		vertical-align: top;
+		@include desk {
+			display: none;
+		}
 	}
 	&__btn {
 		display: none;
@@ -42,11 +50,75 @@
 		background-color: var(--main-white-color);
 		color: var(--main-accent-color);
 		border-radius: 22px;
+		transition-property: background-color;
+		transition-duration: var(--primary-transition-duration);
+		transition-timing-function: var(--primary-transition-timing-function);
+		animation-name: BgColor;
+		animation-duration: 2s;
+		animation-delay: 4s;
+		animation-iteration-count: 2;
+		animation-timing-function: var(--primary-transition-timing-function);
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
-			display: block;
+			display: flex;
+			align-items: center;
+			padding-left: 37px;
+			position: relative;
+		}
+		&::after {
+			content: '\276F';
+			font-size: 12px;
+			position: absolute;
+			top: 15px;
+			right: 33px;
+			color: var(--main-accent-color);
 		}
 	}
+}
+
+.page-nav__btn:focus,
+.page-nav__btn:hover {
+	background-color: var(--secondary-gray-color);
+}
+
+@keyframes BgColor {
+	0% {
+		background-color: var(--main-white-color);
+	}
+
+	50% {
+		background-color: var(--non-accent-color);
+	}
+
+	100% {
+		background-color: var(--main-white-color);
+	}
+}
+
+.site-nav {
+	display: none;
+	@include desk {
+		display: flex;
+		justify-content: space-between;
+		width: 541px;
+		z-index: 2;
+	}
+}
+
+.site-nav__item {
+	color: var(--main-white-color);
+	transition-property: background-color;
+	transition-duration: var(--primary-transition-duration);
+	transition-timing-function: var(--primary-transition-timing-function);
+	@include font(16px, 700, 1.14, 0.04em);
+	&:focus,
+	&:hover {
+		color: var(--main-accent-color);
+	}
+}
+
+.site-nav__item--active {
+	color: var(--main-accent-color);
 }
 
 .hero-container {
@@ -58,6 +130,10 @@
 		top: 102px;
 		left: 34px;
 	}
+	@include desk {
+		top: 171px;
+		left: 74px;
+	}
 }
 .hero-container__title {
 	font-family: Titan One, sans-serif;
@@ -67,6 +143,10 @@
 	padding-bottom: 19px;
 	@include tab {
 		@include font(22px, 400, 1.14, 0.04em);
+	}
+	@include desk {
+		@include font(38px, 400, 1.16, 0.04em);
+		padding-bottom: 25px;
 	}
 }
 
@@ -78,6 +158,55 @@
 	@include tab {
 		@include font(34px, 400, 0.91, 0.02em);
 	}
+	@include desk {
+		@include font(58px, 400, 0.9, 0.02em);
+	}
+}
+
+.hero__btn {
+	width: 83px;
+	height: 24px;
+	background-color: var(--main-white-color);
+	color: var(--main-accent-color);
+	border-radius: 20px;
+	transition-property: background-color;
+	transition-duration: var(--primary-transition-duration);
+	transition-timing-function: var(--primary-transition-timing-function);
+	@include font(8px, 400, 1.25, null);
+	text-align: center;
+	@include desk {
+		width: 138px;
+		height: 40px;
+		@include font(14px, 400, 1.28, null);
+	}
+	&--accent {
+		width: 83px;
+		height: 24px;
+		background-color: var(--main-accent-color);
+		color: var(--main-white-color);
+		border-radius: 20px;
+		transition-property: background-color;
+		transition-duration: var(--primary-transition-duration);
+		transition-timing-function: var(--primary-transition-timing-function);
+		@include font(8px, 400, 1.25, null);
+		text-align: center;
+		margin-right: 8px;
+		@include desk {
+			width: 102px;
+			height: 40px;
+			@include font(14px, 400, 1.28, null);
+			margin-right: 15px;
+		}
+	}
+}
+
+.hero__btn:focus,
+.hero__btn:hover {
+	background-color: var(--secondary-gray-color);
+}
+.hero__btn--accent:focus,
+.hero__btn--accent:hover {
+	background-color: var(--secondary-accent-color);
 }
 
 .hero-picture {
@@ -85,8 +214,30 @@
 	right: 32px;
 	bottom: 0;
 	z-index: 3;
+	animation-name: scale;
+	animation-duration: 2s;
+	animation-delay: 500ms;
+	animation-iteration-count: 2;
+	animation-timing-function: var(--primary-transition-timing-function);
 	@include tab {
 		right: 247px;
+	}
+	@include desk {
+		right: 410px;
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 
@@ -99,6 +250,9 @@
 		bottom: 0;
 		z-index: 4;
 	}
+	@include desk {
+		right: 74px;
+	}
 }
 
 .hero-picture-milk {
@@ -108,6 +262,10 @@
 		position: absolute;
 		left: 34px;
 		bottom: 28px;
+	}
+	@include desk {
+		left: 74px;
+		bottom: 45px;
 	}
 }
 
@@ -125,24 +283,142 @@
 		width: 322px;
 		height: 322px;
 	}
+	@include desk {
+		right: 227px;
+		bottom: 75px;
+		width: 538px;
+		height: 538px;
+	}
 }
 
-.hero__btn {
-	width: 83px;
-	height: 24px;
-	background-color: var(--main-white-color);
+.hero-inform__16 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 96px;
+	right: 44px;
+	@include desk {
+		top: 160px;
+		right: 92px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: -2px;
+		right: -10px;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: var(--main-white-color);
+		@include desk {
+			top: -4px;
+			right: -18px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.hero-inform {
+	display: none;
+	@include tab {
+		display: block;
+	}
+}
+
+.hero-inform__23 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: absolute;
+	top: 152px;
+	right: 42px;
+	@include desk {
+		top: 248px;
+		right: 92px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: -1px;
+		right: -8px;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background-color: var(--main-white-color);
+		@include desk {
+			top: -3px;
+			right: -18px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.hero-inform__number {
+	z-index: 2;
+	text-transform: uppercase;
+	font-family: Titan One, sans-serif;
+	@include font(28px, 400, 1.14, 0.04em);
 	color: var(--main-accent-color);
-	border-radius: 20px;
-	@include font(8px, 400, 1.25, null);
-	text-align: center;
-	&--accent {
-		width: 83px;
-		height: 24px;
-		background-color: var(--main-accent-color);
+	@include desk {
+		@include font(46px, 400, 1.15, 0.04em);
+	}
+}
+
+.hero-inform__text {
+	@include font(8px, 400, 1.25, 0.04em);
+	color: var(--main-white-color);
+	@include desk {
+		@include font(14px, 400, 1.29, 0.04em);
+	}
+}
+
+.header-title {
+	display: none;
+	@include tab {
+		position: absolute;
+		left: 154px;
+		bottom: 59px;
+		display: block;
+		width: 114px;
+		@include font(8px, 400, 1.5, 0.04em);
 		color: var(--main-white-color);
-		border-radius: 20px;
-		@include font(8px, 400, 1.25, null);
-		text-align: center;
-		margin-right: 8px;
+	}
+	@include desk {
+		left: 292px;
+		bottom: 102px;
+		width: 200px;
+		@include font(14px, 400, 1.4, 0.04em);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -25px;
+		left: 0px;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		background-color: var(--main-white-color);
+		@include desk {
+			width: 26px;
+			height: 26px;
+			bottom: -46px;
+		}
+	}
+	&::before {
+		content: '\2794';
+		font-size: 9px;
+		color: var(--main-accent-color);
+		position: absolute;
+		bottom: -23px;
+		left: 5px;
+		z-index: 1;
+		@include desk {
+			font-size: 14px;
+			bottom: -43px;
+			left: 7px;
+		}
 	}
 }
