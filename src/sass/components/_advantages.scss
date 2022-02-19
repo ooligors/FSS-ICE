@@ -1,0 +1,91 @@
+.advantages {
+	background-color: var(--background-color-pink);
+	padding-bottom: 97px;
+
+	@include tab {
+		padding-bottom: 140px;
+	}
+	@include desk {
+		padding-bottom: 139px;
+	}
+
+	&-list {
+		@include tab {
+			display: flex;
+			margin: -15px;
+			flex-wrap: wrap;
+		}
+		&__item {
+			margin-bottom: 38px;
+			@include tab {
+				flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
+				margin: 15px;
+			}
+			&::before {
+				content: '';
+				background-color: var(--background-color-pink);
+				height: 50px;
+
+				display: block;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+
+				margin-bottom: 16px;
+			}
+			&:nth-child(1)::before {
+				background-image: url('../images/advantages-icon1-mob@1x.png');
+				width: 33px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon1-mob@2x.png');
+				}
+			}
+
+			&:nth-child(2)::before {
+				background-image: url('../images/advantages-icon2-mob@1x.png');
+				width: 50px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon2-mob@2x.png');
+				}
+			}
+
+			&:nth-child(3)::before {
+				background-image: url('../images/advantages-icon3-mob@1x.png');
+				width: 44px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon3-mob@2x.png');
+				}
+			}
+		}
+	}
+	&-span {
+		@include font(36px, 400, 1.14, 0.04em);
+		font-family: Titan One;
+		color: var(--main-accent-color);
+		text-transform: uppercase;
+		height: 56px;
+		display: block;
+		@include tab {
+			@include font(48px, 400, 1.15, 0.04em);
+			margin-bottom: 13px;
+		}
+		@include desk {
+			@include font(58px, 400, 1.14, 0.04em);
+			height: 65px;
+			margin-bottom: 15px;
+		}
+	}
+	&-text {
+		@include font(12px, 700, 1.7, 0.02em);
+		color: var(--main-black-color);
+		max-width: 230px;
+		@include tab {
+			@include font(14px, 700, 1.74, 0.02em);
+			max-width: 180px;
+		}
+		@include desk {
+			@include font(16px, 700, 1.76, 0.02em);
+			max-width: 330px;
+		}
+	}
+}
