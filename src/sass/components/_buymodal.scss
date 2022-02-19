@@ -1,0 +1,181 @@
+.backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 6;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	&.is-hidden {
+		opacity: 0;
+		pointer-events: none;
+		visibility: none;
+		& .modal {
+			transform: scale(0.2);
+		}
+	}
+}
+.modal {
+	position: absolute;
+	padding: 40px;
+	width: 80vw;
+	min-height: 100vh;
+	top: 1%;
+	left: 50%;
+	transform: translate(-50%, -1%) scale(1);
+	@include mob {
+		width: 420px;
+		min-height: 735px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	@include tab {
+		width: 480px;
+	}
+	@include desk {
+		min-height: 735px;
+	}
+
+	background-color: var(--background-color);
+	border-radius: 70px;
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+	&__call {
+		text-align: center;
+		margin-bottom: 12px;
+
+		@include font(30px, 700, 1.5, null);
+		@include desk {
+			@include font(30px, 700, 1.15, null);
+		}
+		color: var(--main-white-color);
+	}
+	&__name-label {
+		margin-bottom: 4px;
+
+		color: var(--main-white-color);
+		@include font(15px, null, 1.2, 0.01em);
+	}
+	&__inputs {
+		padding-left: 20px;
+		height: 40px;
+		width: 100%;
+		border: 2px solid rgba(33, 33, 33, 0.2);
+		border-radius: 25px;
+		outline: none;
+		&:focus,
+		&:active {
+			border: 2px solid var(--main-accent-color);
+		}
+	}
+	&__input {
+		&-containers {
+			position: relative;
+			margin-bottom: 15px;
+		}
+		&-count {
+			text-align: center;
+			height: 40px;
+			width: 100%;
+			border: 2px solid rgba(33, 33, 33, 0.2);
+			border-radius: 25px;
+			outline: none;
+			&:focus,
+			&:active {
+				border: 2px solid var(--main-accent-color);
+			}
+		}
+	}
+	&__select {
+		padding-left: 20px;
+		height: 40px;
+		width: 100%;
+		border: 2px solid rgba(33, 33, 33, 0.2);
+		border-radius: 25px;
+		outline: none;
+		&:focus,
+		&:active {
+			border: 2px solid var(--main-accent-color);
+		}
+	}
+	&__textarea {
+		margin-bottom: 30px;
+		padding: 12px 16px;
+		height: 120px;
+
+		@include font(12px, null, 1.17, 0.01em);
+		@include desk {
+			@include font(14px, null, 1.14, 0.01em);
+		}
+		border: 2px solid rgba(33, 33, 33, 0.2);
+		border-radius: 25px;
+		resize: none;
+		outline: none;
+		&::placeholder {
+			color: rgba(117, 117, 117, 0.5);
+		}
+		&:focus,
+		&:active {
+			border: 2px solid var(--main-accent-color);
+		}
+	}
+	&__submit {
+		width: 200px;
+		height: 50px;
+		margin: 0 auto;
+
+		background-color: var(--main-accent-color);
+		box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.5);
+		border-radius: 25px;
+		color: var(--main-white-color);
+		@include font(16px, 700, 1.87, 0.06em);
+		&:hover,
+		&:focus {
+			background-color: var(--secondary-accent-color);
+			box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.8);
+		}
+	}
+	&__count-date-container {
+		display: flex;
+		flex-direction: column;
+		@include mob {
+			flex-direction: row;
+		}
+	}
+	&__flex-count-date {
+		@include tab {
+			margin-right: 37px;
+		}
+	}
+}
+.btn-close {
+	position: absolute;
+	top: 0;
+	right: -30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	transition-duration: 0ms;
+	&:hover,
+	&:focus {
+		color: var(--background-color);
+		border-color: var(--background-color);
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 18px;
+		height: 18px;
+		transition-duration: 0ms;
+	}
+}

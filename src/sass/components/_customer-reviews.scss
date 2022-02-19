@@ -1,0 +1,152 @@
+.customer-reviews {
+	padding-bottom: 86px;
+	padding-top: 80px;
+	@include tab {
+		padding-bottom: 119px;
+		padding-top: 121px;
+	}
+	@include desk {
+		padding-bottom: 132px;
+		padding-top: 123px;
+	}
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slider {
+	&__img {
+		margin-bottom: 29px;
+		@include tab {
+			margin-bottom: 19px;
+		}
+		@include desk {
+			margin-bottom: 15px;
+		}
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__text-box {
+		position: relative;
+		background-color: var(--slider-background);
+
+		width: 100%;
+		padding: 48px 50px 20px 50px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+		@include tab {
+			padding: 47px 36px 28px 60px;
+			margin-bottom: 24px;
+			max-width: 620px;
+		}
+		@include desk {
+			padding: 47px 54px 32px 59px;
+			margin-bottom: 15px;
+			max-width: 926px;
+		}
+
+		&::before {
+			content: '';
+			background-image: url(../images/double-quote.svg);
+			position: absolute;
+			top: 28px;
+			left: 61px;
+			@include tab {
+				top: 30px;
+				left: 40px;
+			}
+			@include desk {
+				top: 32px;
+				left: 50px;
+			}
+			width: 54px;
+			height: 40px;
+			fill: var(--double-quote);
+
+			z-index: 1;
+		}
+	}
+
+	&__text {
+		position: relative;
+
+		font-family: 'DM Sans', sans-serif;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: calc(30.6 / 12);
+		text-align: center;
+
+		color: var(--main-black-color);
+
+		z-index: 2;
+		@include tab {
+			font-size: 14px;
+			line-height: calc(30.24 / 14);
+		}
+		@include desk {
+			font-size: 16px;
+			line-height: calc(29.76 / 16);
+		}
+	}
+	&__underline {
+		padding-left: 9px;
+		padding-right: 14px;
+
+		background: linear-gradient(transparent 30px, var(--double-quote) 30px);
+		background-size: 100% 31px;
+		border-bottom: 1px solid var(--double-quote);
+		@include tab {
+			padding-left: 20px;
+			padding-right: 44px;
+			background: linear-gradient(transparent 29px, var(--double-quote) 29px);
+			background-size: 100% 30px;
+			border-bottom: none;
+		}
+		@include desk {
+			padding-left: 28px;
+			padding-right: 35px;
+		}
+	}
+	&__customer-name {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 186%;
+		text-align: center;
+		color: var(--main-black-color);
+
+		margin-bottom: 30px;
+		@include tab {
+			margin-bottom: 35px;
+			font-size: 16px;
+		}
+		@include desk {
+			font-size: 20px;
+		}
+		&::before {
+			content: '';
+			background-image: url(../images/3dots.svg);
+			width: 32px;
+			height: 4px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 18px;
+			@include tab {
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+.slick-dots li button:before {
+	width: 12px;
+	height: 12px;
+	content: '';
+	background-image: url(../images/gray-ellipse.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.slick-dots li.slick-active button:before {
+	background-image: url(../images/home.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
