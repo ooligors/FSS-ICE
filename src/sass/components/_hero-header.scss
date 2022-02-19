@@ -49,6 +49,9 @@
 		background-color: var(--main-white-color);
 		color: var(--main-accent-color);
 		border-radius: 22px;
+		transition-property: background-color;
+		transition-duration: var(--primary-transition-duration);
+		transition-timing-function: var(--primary-transition-timing-function);
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
 			display: flex;
@@ -79,8 +82,18 @@
 		justify-content: space-between;
 		width: 541px;
 		z-index: 2;
-		color: var(--main-white-color);
-		@include font(16px, 700, 1.14, 0.04em);
+	}
+}
+
+.site-nav__item {
+	color: var(--main-white-color);
+	transition-property: background-color;
+	transition-duration: var(--primary-transition-duration);
+	transition-timing-function: var(--primary-transition-timing-function);
+	@include font(16px, 700, 1.14, 0.04em);
+	&:focus,
+	&:hover {
+		color: var(--main-accent-color);
 	}
 }
 
@@ -136,6 +149,9 @@
 	background-color: var(--main-white-color);
 	color: var(--main-accent-color);
 	border-radius: 20px;
+	transition-property: background-color;
+	transition-duration: var(--primary-transition-duration);
+	transition-timing-function: var(--primary-transition-timing-function);
 	@include font(8px, 400, 1.25, null);
 	text-align: center;
 	@include desk {
@@ -149,6 +165,9 @@
 		background-color: var(--main-accent-color);
 		color: var(--main-white-color);
 		border-radius: 20px;
+		transition-property: background-color;
+		transition-duration: var(--primary-transition-duration);
+		transition-timing-function: var(--primary-transition-timing-function);
 		@include font(8px, 400, 1.25, null);
 		text-align: center;
 		margin-right: 8px;
