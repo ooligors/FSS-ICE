@@ -1,19 +1,21 @@
 <header class="header">
-    <div class="container header-container">
-        <div class="header-container-body">        
-            <nav class="page-nav">
-                <a href="" class="header-logo">
-                    <img srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
-                    src="./images/logo.png"
-                    alt="logo">
-                </a>
-                <button type="button" class="page-nav__menu-btn">
-                    <svg class="page-nav__burger">
-                    <use href="./images/icons.svg#burger"></use>
-                    </svg>
-                </button>
-                <button type="button" class="page-nav__btn">Buy now <span> ></span> </button>
-                <!-- <ul class="site-nav list">
+	<div class="container header-container">
+		<div class="header-container-body">
+			<nav class="page-nav">
+				<a href="" class="header-logo">
+					<img
+						srcset="./images/logo.png 1x, ./images/logo@2x.png 2x"
+						src="./images/logo.png"
+						alt="logo"
+					/>
+				</a>
+				<button type="button" class="page-nav__menu-btn" data-menu-open>
+					<svg class="page-nav__burger">
+						<use href="./images/icons.svg#burger"></use>
+					</svg>
+				</button>
+				<button type="button" class="page-nav__btn">Buy now <span> ></span></button>
+				<!-- <ul class="site-nav list">
                     <li class="site-nav__item"><a href="" class="site-nav__link site-nav__item--active">Home</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">Contact</a></li>
                     <li class="site-nav__item"><a href="" class="site-nav__link">How it’s made?</a></li>
@@ -21,36 +23,54 @@
                     <li class="site-nav__item"><a href="" class="site-nav__link">Contact</a></li>
                 </ul>           
                 <button type="button" class="hero__btn">How it’s made?</button> -->
-            </nav>
-            <section class="hero">
-                <div class="hero-container">
-                    <h1 class="hero-container__title">ice cream<br>made with<br><span class="hero-container__title--accent">passion</span></h1>
-                    <button type="button" class="hero__btn--accent">Products</button>
-                    <button type="button" class="hero__btn">How it’s made?</button>
-                </div>
-                <picture class="hero-picture">
-                    <source srcset="./images/hero-icecream-desk@1x.png 1x, ./images/hero-icecream-desk@2x.png 2x" media="(min-width: 1200px)" />
-                    <source srcset="./images/hero-icecream-tab@1x.png 1x, ./images/hero-icecream-tab@2x.png 2x"
-                        media="(min-width: 768px)" />
-                    <source srcset="./images/hero-icecream-mob@1x.png 1x, ./images/hero-icecream-mob@2x.png 2x" media="(min-width: 320px)" />
-                    <img src="./images/hero-icecream-mob@1x.png" alt="icecream">
-                </picture>
-                <picture class="hero-picture-girl">
-                    <source srcset="./images/hero-girl-desk@1x.png png 1x, ./images/hero-girl-desk@2x.png 2x"
-                        media="(min-width: 1200px)" />
-                    <source srcset="./images/hero-girl-tab@1x.png 1x, ./images/hero-girl-tab@2x.png 2x"
-                        media="(min-width: 768px)" />                    
-                    <img src="./images/hero-girl-tab@1x.png" alt="girl">
-                </picture>                
-                <picture class="hero-picture-milk">
-                    <source srcset="./images/hero-milkjug-desk@1x.png 1x, ./images/hero-milkjug-desk@2x.png 2x"
-                        media="(min-width: 1200px)" />
-                    <source srcset="./images/hero-milkjug-tab@1x.png 1x, ./images/hero-milkjug-tab@2x.png 2x"
-                        media="(min-width: 768px)" />                    
-                    <img src="./images/hero-milkjug-tab@1x.png" alt="girl">
-                </picture>
-                <div class="ellipse"></div>              
-                <!-- <div>
+			</nav>
+			<section class="hero">
+				<div class="hero-container">
+					<h1 class="hero-container__title">
+						ice cream<br />made with<br /><span class="hero-container__title--accent">passion</span>
+					</h1>
+					<button type="button" class="hero__btn--accent">Products</button>
+					<button type="button" class="hero__btn">How it’s made?</button>
+				</div>
+				<picture class="hero-picture">
+					<source
+						srcset="./images/hero-icecream-desk@1x.png 1x, ./images/hero-icecream-desk@2x.png 2x"
+						media="(min-width: 1200px)"
+					/>
+					<source
+						srcset="./images/hero-icecream-tab@1x.png 1x, ./images/hero-icecream-tab@2x.png 2x"
+						media="(min-width: 768px)"
+					/>
+					<source
+						srcset="./images/hero-icecream-mob@1x.png 1x, ./images/hero-icecream-mob@2x.png 2x"
+						media="(min-width: 320px)"
+					/>
+					<img src="./images/hero-icecream-mob@1x.png" alt="icecream" />
+				</picture>
+				<picture class="hero-picture-girl">
+					<source
+						srcset="./images/hero-girl-desk@1x.png png 1x, ./images/hero-girl-desk@2x.png 2x"
+						media="(min-width: 1200px)"
+					/>
+					<source
+						srcset="./images/hero-girl-tab@1x.png 1x, ./images/hero-girl-tab@2x.png 2x"
+						media="(min-width: 768px)"
+					/>
+					<img src="./images/hero-girl-tab@1x.png" alt="girl" />
+				</picture>
+				<picture class="hero-picture-milk">
+					<source
+						srcset="./images/hero-milkjug-desk@1x.png 1x, ./images/hero-milkjug-desk@2x.png 2x"
+						media="(min-width: 1200px)"
+					/>
+					<source
+						srcset="./images/hero-milkjug-tab@1x.png 1x, ./images/hero-milkjug-tab@2x.png 2x"
+						media="(min-width: 768px)"
+					/>
+					<img src="./images/hero-milkjug-tab@1x.png" alt="girl" />
+				</picture>
+				<div class="ellipse"></div>
+				<!-- <div>
                     <b>16</b>
                     <p>cafes</p>
                 </div>
@@ -58,7 +78,7 @@
                     <b>23</b>
                     <p>food trucks</p>
                 </div> -->
-            </section>
-        </div>
-    </div>
+			</section>
+		</div>
+	</div>
 </header>

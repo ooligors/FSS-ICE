@@ -1,21 +1,12 @@
 .advantages {
 	background-color: var(--background-color-pink);
-	padding-top: 39px;
 	padding-bottom: 97px;
-	// padding-left: -10px;
-	// padding-right: -10px;
 
 	@include tab {
-		padding-top: 66px;
 		padding-bottom: 140px;
-		// padding-left: 6px;
-		// padding-right: 6px;
 	}
 	@include desk {
-		padding-top: 39px;
 		padding-bottom: 139px;
-		// padding-left: 85px;
-		// padding-right: 85px;
 	}
 
 	&-list {
@@ -44,16 +35,25 @@
 			&:nth-child(1)::before {
 				background-image: url('../images/advantages-icon1-mob@1x.png');
 				width: 33px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon1-mob@2x.png');
+				}
 			}
 
 			&:nth-child(2)::before {
 				background-image: url('../images/advantages-icon2-mob@1x.png');
 				width: 50px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon2-mob@2x.png');
+				}
 			}
 
 			&:nth-child(3)::before {
 				background-image: url('../images/advantages-icon3-mob@1x.png');
 				width: 44px;
+				@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+					background-image: url('../images/advantages-icon3-mob@2x.png');
+				}
 			}
 		}
 	}
