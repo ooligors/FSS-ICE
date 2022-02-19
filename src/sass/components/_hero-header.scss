@@ -38,6 +38,9 @@
 		width: 20px;
 		height: 12px;
 		vertical-align: top;
+		@include desk {
+			display: none;
+		}
 	}
 	&__btn {
 		display: none;
@@ -51,7 +54,6 @@
 			display: flex;
 			align-items: center;
 			padding-left: 37px;
-			padding-right: 37px;
 			position: relative;
 		}
 		&::after {
@@ -59,10 +61,26 @@
 			font-size: 12px;
 			position: absolute;
 			top: 15px;
-			right: 37px;
+			right: 33px;
 			color: var(--main-accent-color);
 		}
 	}
+}
+
+.site-nav {
+	display: none;
+	@include desk {
+		display: flex;
+		justify-content: space-between;
+		width: 541px;
+		z-index: 2;
+		color: var(--main-white-color);
+		@include font(16px, 700, 1.14, 0.04em);
+	}
+}
+
+.site-nav__item--active {
+	color: var(--main-accent-color);
 }
 
 .hero-container {
@@ -74,6 +92,10 @@
 		top: 102px;
 		left: 34px;
 	}
+	@include desk {
+		top: 171px;
+		left: 74px;
+	}
 }
 .hero-container__title {
 	font-family: Titan One, sans-serif;
@@ -84,6 +106,10 @@
 	@include tab {
 		@include font(22px, 400, 1.14, 0.04em);
 	}
+	@include desk {
+		@include font(38px, 400, 1.16, 0.04em);
+		padding-bottom: 25px;
+	}
 }
 
 .hero-container__title--accent {
@@ -93,6 +119,40 @@
 	color: var(--main-accent-color);
 	@include tab {
 		@include font(34px, 400, 0.91, 0.02em);
+	}
+	@include desk {
+		@include font(58px, 400, 0.9, 0.02em);
+	}
+}
+
+.hero__btn {
+	width: 83px;
+	height: 24px;
+	background-color: var(--main-white-color);
+	color: var(--main-accent-color);
+	border-radius: 20px;
+	@include font(8px, 400, 1.25, null);
+	text-align: center;
+	@include desk {
+		width: 138px;
+		height: 40px;
+		@include font(14px, 400, 1.28, null);
+	}
+	&--accent {
+		width: 83px;
+		height: 24px;
+		background-color: var(--main-accent-color);
+		color: var(--main-white-color);
+		border-radius: 20px;
+		@include font(8px, 400, 1.25, null);
+		text-align: center;
+		margin-right: 8px;
+		@include desk {
+			width: 102px;
+			height: 40px;
+			@include font(14px, 400, 1.28, null);
+			margin-right: 15px;
+		}
 	}
 }
 
@@ -156,26 +216,6 @@
 		bottom: 75px;
 		width: 538px;
 		height: 538px;
-	}
-}
-
-.hero__btn {
-	width: 83px;
-	height: 24px;
-	background-color: var(--main-white-color);
-	color: var(--main-accent-color);
-	border-radius: 20px;
-	@include font(8px, 400, 1.25, null);
-	text-align: center;
-	&--accent {
-		width: 83px;
-		height: 24px;
-		background-color: var(--main-accent-color);
-		color: var(--main-white-color);
-		border-radius: 20px;
-		@include font(8px, 400, 1.25, null);
-		text-align: center;
-		margin-right: 8px;
 	}
 }
 
