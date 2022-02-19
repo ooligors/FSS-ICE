@@ -1,9 +1,13 @@
 .footer {
+	background-color: var(--background-color-pink);
+	padding-top: 63px;
 	padding-bottom: 25px;
 	@include tab {
+		padding-top: 108px;
 		padding-bottom: 18px;
 	}
 	@include desk {
+		padding-top: 115px;
 		padding-bottom: 10px;
 	}
 }
