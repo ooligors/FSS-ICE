@@ -67,6 +67,11 @@
 	}
 }
 
+.page-nav__btn:focus,
+.page-nav__btn:hover {
+	background-color: var(--secondary-gray-color);
+}
+
 .site-nav {
 	display: none;
 	@include desk {
@@ -154,6 +159,15 @@
 			margin-right: 15px;
 		}
 	}
+}
+
+.hero__btn:focus,
+.hero__btn:hover {
+	background-color: var(--secondary-gray-color);
+}
+.hero__btn--accent:focus,
+.hero__btn--accent:hover {
+	background-color: var(--secondary-accent-color);
 }
 
 .hero-picture {
