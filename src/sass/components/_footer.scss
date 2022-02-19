@@ -1,0 +1,172 @@
+.footer {
+	padding-bottom: 25px;
+	@include tab {
+		padding-bottom: 18px;
+	}
+	@include desk {
+		padding-bottom: 10px;
+	}
+}
+
+
+
+.container--footer-box-string {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include tab {
+		display: flex;
+        padding-left: 34px;
+        padding-right: 34px;
+	}
+
+    @include desk {
+        padding-left: 75px;
+        padding-right: 75px;
+	}
+}
+
+.footer-social-list--string {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-titel {
+	width: 234px;
+	margin-bottom: 43px;
+	@include tab {
+		width: 340px;
+		margin-bottom: 0px;
+	}
+	@include desk {
+		width: 480px;
+	}
+}
+
+.footer-homemade {
+	margin-bottom: 17px;
+	font-family: 'Titan One', sans-serif;
+	@include font(18px, null, 1.17, null);
+	@include tab {
+		@include font(26px, null, 1.15, 0.04em);
+		margin-bottom: 16px;
+	}
+	@include desk {
+		@include font(30px, null, 1.13, 0.04em);
+		margin-bottom: 15px;
+	}
+
+	text-transform: uppercase;
+	color: var(--title-label);
+}
+
+.footer-passion {
+	text-transform: uppercase;
+
+	color: var(--main-accent-color);
+	font-family: 'Titan One', sans-serif;
+	@include font(34px, null, 1.15, 0.04em);
+	@include tab {
+		@include font(48px, null, 1.15, 0.06em);
+	}
+	@include desk {
+		@include font(58px, null, 1.14, 0.06em);
+	}
+}
+
+.footer-link {
+	margin-left: auto;
+}
+
+.footer-social-list {
+	margin-bottom: 46px;
+
+	@include desk {
+		margin-bottom: 50px;
+	}
+}
+
+.footer-social-list__item {
+	margin-left: 28px;
+	@include tab {
+		margin-left: 30px;
+	}
+	@include desk {
+		margin-left: 24px;
+	}
+}
+
+.footer-social-list__item:first-child {
+	margin-left: 0px;
+}
+
+.footer-social-list__link {
+    cursor: pointer;
+	display: inline-block;
+	color: var(--non-accent-color);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover,
+	&:focus {
+		color: var(--main-accent-color);
+	}
+}
+
+.footer-social-list__icon {
+	fill: currentColor;
+}
+
+.footer-contact {
+	@include font(12px, bold, 1.83,  0.02em);
+	@include tab {
+		@include font(14px, bold, 1.86, 0.02em);
+	}
+	@include desk {
+		@include font(16px, bold, 1.88, 0.02em);
+	}
+
+	color: var(--main-black-color);
+	text-align: right;
+}
+
+.footer-tel {
+    cursor: pointer;
+	color: var(--main-accent-color);
+}
+
+
+
+
+
+.footer-line {
+	margin-top: 43px;
+	margin-bottom: 22px;
+	border: none;
+	background-color: var(--double-quote);
+	color: var(--double-quote);
+	height: 1px;
+	@include tab {
+		margin-top: 91px;
+		margin-bottom: 29px;
+	}
+	@include desk {
+		margin-top: 97px;
+		margin-bottom: 9px;
+	}
+}
+
+
+.footer-Rights__text {
+	@include font(14px, bold, 1.5, 0.02em);
+	width: 150px;
+
+	@include tab {
+		@include font(14px, bold, 1.86, 0.02em);
+		width: 290px;
+	}
+
+	color: var(--main-gray-color);
+	margin-left: auto;
+
+	margin-right: auto;
+}
+
