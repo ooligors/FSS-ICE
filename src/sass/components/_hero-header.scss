@@ -45,6 +45,15 @@
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
 			display: block;
+			position: relative;
+		}
+		&::after {
+			content: '\276F';
+			font-size: 12px;
+			position: absolute;
+			top: 15px;
+			right: 24px;
+			color: var(--main-accent-color);
 		}
 	}
 }
@@ -207,16 +216,23 @@
 .header-title {
 	display: none;
 	&::after {
-		content: '\2192';
-		font-size: 20px;
-		color: black;
+		content: '';
 		position: absolute;
-		top: -1px;
-		right: -8px;
+		bottom: -25px;
+		left: 0px;
 		width: 18px;
 		height: 18px;
 		border-radius: 50%;
 		background-color: var(--main-white-color);
+	}
+	&::before {
+		content: '\2794';
+		font-size: 9px;
+		color: var(--main-accent-color);
+		position: absolute;
+		bottom: -23px;
+		left: 5px;
+		z-index: 1;
 	}
 	@include tab {
 		position: absolute;
