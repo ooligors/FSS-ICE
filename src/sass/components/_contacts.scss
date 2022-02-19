@@ -211,7 +211,7 @@
 	content: '';
 	display: block;
 	position: relative;
-	width: auto;
+	width: 179px;
 	height: 1px;
 	bottom: -25px;
 	border-radius: 2px;
@@ -219,6 +219,7 @@
 
 	@include tab() {
 		bottom: -30px;
+		width: auto;
 	}
 }
 
@@ -333,14 +334,13 @@
 	}
 }
 
-// .section__contacts {
-// 	text-align: center;
-// 	background-image: url(./src/images/contacts-spots@1x.png);
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	background-size: cover;
-// 	max-width: 1200px;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	padding: 200px 0;
-// }
+.section__contacts {
+	@include desk() {
+		// background: linear-gradient(0deg, #fff5f6 85%, white 20%);
+		// background-image: url('../images/contacts-spots@1x.png');
+		// background-repeat: no-repeat;
+
+		background-image: linear-gradient(to right, 0deg, #fff5f6 85%, white 20%),
+			url('../images/contacts-spots@1x.png');
+	}
+}
