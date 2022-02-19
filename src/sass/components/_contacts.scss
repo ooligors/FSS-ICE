@@ -336,11 +336,8 @@
 
 .section__contacts {
 	@include desk() {
-		// background: linear-gradient(0deg, #fff5f6 85%, white 20%);
-		// background-image: url('../images/contacts-spots@1x.png');
-		// background-repeat: no-repeat;
-
-		background-image: linear-gradient(to right, 0deg, #fff5f6 85%, white 20%),
-			url('../images/contacts-spots@1x.png');
+		background-color: linear-gradient(0deg, #fff5f6 85%, white 20%);
+		background-image: url('../images/contacts-spots@1x.png');
+		background-repeat: no-repeat;
 	}
 }
