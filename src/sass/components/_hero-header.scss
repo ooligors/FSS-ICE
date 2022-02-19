@@ -13,6 +13,7 @@
 		height: 665px;
 	}
 }
+
 .hero-header {
 	background-color: var(--background-color);
 	width: 100%;
@@ -52,6 +53,11 @@
 		transition-property: background-color;
 		transition-duration: var(--primary-transition-duration);
 		transition-timing-function: var(--primary-transition-timing-function);
+		animation-name: BgColor;
+		animation-duration: 2s;
+		animation-delay: 4s;
+		animation-iteration-count: 2;
+		animation-timing-function: var(--primary-transition-timing-function);
 		@include font(16px, 700, 1.31, 0.03em);
 		@include tab {
 			display: flex;
@@ -73,6 +79,20 @@
 .page-nav__btn:focus,
 .page-nav__btn:hover {
 	background-color: var(--secondary-gray-color);
+}
+
+@keyframes BgColor {
+	0% {
+		background-color: var(--main-white-color);
+	}
+
+	50% {
+		background-color: var(--non-accent-color);
+	}
+
+	100% {
+		background-color: var(--main-white-color);
+	}
 }
 
 .site-nav {
@@ -194,11 +214,30 @@
 	right: 32px;
 	bottom: 0;
 	z-index: 3;
+	animation-name: scale;
+	animation-duration: 2s;
+	animation-delay: 500ms;
+	animation-iteration-count: 2;
+	animation-timing-function: var(--primary-transition-timing-function);
 	@include tab {
 		right: 247px;
 	}
 	@include desk {
 		right: 410px;
+	}
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.15);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 
