@@ -1,4 +1,4 @@
-<div class="backdrop is-hidden" data-buymodal>
+<div class="backdrop is-hidden" data-buymodal data-buymodal1>
 	<div class="modal">
 		<button class="btn-close" aria-label="Закрыть окно заказа" data-buymodal-close>
 			<svg class="btn-close__icon">
@@ -83,14 +83,10 @@
 					</div>
 				</div>
 			</div>
-			<label for="modal-textarea" class="modal__name-label">Comment</label>
-			<textarea
-				name="comment"
-				id="modal-textarea"
-				rows="10"
-				class="modal__textarea"
-				placeholder="your comment"
-			></textarea>
+			<div class="textarea-hidden">
+				<label for="modal-textarea" class="modal__name-label">Comment</label>
+				<textarea name="comment" id="modal-textarea" rows="10" class="modal__textarea" placeholder="your comment"></textarea>
+			</div>
 			<button type="submit" class="btn-primary modal__submit">Submit</button>
 		</form>
 	</div>
