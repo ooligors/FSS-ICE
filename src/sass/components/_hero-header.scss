@@ -1,6 +1,6 @@
 .header-container {
 	position: relative;
-	overflow: hidden;
+
 	margin: 0 auto;
 	height: 502px;
 	padding: 6px 20px 0px 20px;
@@ -15,6 +15,7 @@
 }
 
 .header-hero {
+	overflow: hidden;
 	background-color: var(--background-color);
 	width: 100%;
 }
