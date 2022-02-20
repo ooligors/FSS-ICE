@@ -139,7 +139,7 @@
 		&:hover,
 		&:focus {
 			background-color: var(--secondary-accent-color);
-			box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.8);
+			box-shadow: 0px 7px 7px rgba(255, 255, 255, 0.8);
 		}
 	}
 	&__count-date-container {
@@ -169,8 +169,9 @@
 	transition-duration: 0ms;
 	&:hover,
 	&:focus {
-		color: var(--background-color);
-		border-color: var(--background-color);
+		color: var(--secondary-accent-color);
+		border-color: var(--secondary-accent-color);
+		box-shadow: 0px 0px 10px #c7133e70;
 	}
 	&__icon {
 		position: absolute;
