@@ -1,6 +1,5 @@
 .section.gallery {
   background-image: linear-gradient(to bottom, var(	--background-color-pink) 0%, var(	--background-color-pink) 40%, var(--main-white-color) 40%, var(--main-white-color) 100%);
-  // border: 1px solid black;
   display: flex;
   align-items: center;
 
@@ -16,7 +15,6 @@
 .gallery__container {
     display: flex;
     justify-content: center;
-
 }
 
 .gallery__image {
