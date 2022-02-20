@@ -703,6 +703,12 @@ button {
 .section.gallery {
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--background-color-pink)), color-stop(40%, var(--background-color-pink)), color-stop(40%, var(--main-white-color)), to(var(--main-white-color)));
   background-image: linear-gradient(to bottom, var(--background-color-pink) 0%, var(--background-color-pink) 40%, var(--main-white-color) 40%, var(--main-white-color) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 768px) {

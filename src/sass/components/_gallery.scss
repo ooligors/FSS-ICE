@@ -1,8 +1,8 @@
 .section.gallery {
   background-image: linear-gradient(to bottom, var(	--background-color-pink) 0%, var(	--background-color-pink) 40%, var(--main-white-color) 40%, var(--main-white-color) 100%);
-  // @include mob {
-  //   // height: 120px;
-  // }
+  // border: 1px solid black;
+  display: flex;
+  align-items: center;
 
   @include tab {
     height: 257px;
