@@ -1,20 +1,20 @@
 .section__contacts {
-	background: linear-gradient(0deg, rgb(255, 245, 246) 92%, rgb(255, 255, 255) 20%);
+	background: linear-gradient(0deg, rgb(255, 245, 246) 96%, rgb(255, 255, 255) 20%);
 
 	@include tab() {
-		background: linear-gradient(0deg, rgb(255, 245, 246) 85%, rgb(255, 255, 255) 20%);
+		background: linear-gradient(0deg, rgb(255, 245, 246) 91%, rgb(255, 255, 255) 20%);
 	}
 	@include desk() {
 		background-image: url('../images/contacts-spots@1x.png'),
-			linear-gradient(0deg, #fff5f6 83%, white 17%);
+			linear-gradient(0deg, #fff5f6 90%, white 17%);
 		background-repeat: no-repeat;
-		background-position: 0px 30%;
+		background-position: 0px 15%;
 		background-size: contain;
 		@include x2() {
 			background-image: url('../images/contacts-spots@2x.png'),
-				linear-gradient(0deg, #fff5f6 83%, white 17%);
+				linear-gradient(0deg, #fff5f6 90%, white 17%);
 			background-repeat: no-repeat;
-			background-position: 0px 30%;
+			background-position: 0px 15%;
 			background-size: contain;
 		}
 	}
