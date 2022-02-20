@@ -9,7 +9,12 @@
 						alt="logo"
 					/>
 				</a>
-				<button type="button" class="page-nav__menu-btn" data-menu-open>
+				<button
+					type="button"
+					class="page-nav__menu-btn js-open-menu"
+					aria-expanded="false"
+					aria-controls="mob-menu"
+				>
 					<svg class="page-nav__burger">
 						<use href="./images/icons.svg#burger"></use>
 					</svg>
@@ -31,8 +36,8 @@
 						ice cream<br />made with<br /><span class="hero-container__title--accent">passion</span>
 					</h1>
 					<div class="hero-header__btn">
-					<button type="button" class="hero__btn--accent">Products</button>
-					<button type="button" class="hero__btn">How it’s made?</button>
+						<button type="button" class="hero__btn--accent">Products</button>
+						<button type="button" class="hero__btn">How it’s made?</button>
 					</div>
 				</div>
 				<picture class="hero-picture">
