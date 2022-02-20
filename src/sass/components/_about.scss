@@ -21,7 +21,8 @@
 	}
 
 	@include desk() {
-		padding: 125px 100px 39px 100px;
+		padding-top: 125px;
+		padding-bottom: 39px;
 
 		background-image: url('../images/about-milk-desk@1x.png');
 		background-repeat: no-repeat;
