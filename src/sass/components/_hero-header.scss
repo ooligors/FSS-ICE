@@ -161,7 +161,9 @@
 }
 
 .hero__btn {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 83px;
 	height: 24px;
 	background-color: var(--main-white-color);
@@ -178,7 +180,7 @@
 		@include font(14px, 400, 1.28, null);
 	}
 	&--accent {
-		display: block;
+		// display: block;
 		width: 62px;
 		height: 24px;
 		background-color: var(--main-accent-color);
