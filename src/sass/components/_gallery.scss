@@ -1,88 +1,81 @@
 .section.gallery {
-	background-image: linear-gradient(
-		to bottom,
-		var(--background-color-pink) 0%,
-		var(--background-color-pink) 40%,
-		var(--main-white-color) 40%,
-		var(--main-white-color) 100%
-	);
-	// border: 1px solid black;
-	display: flex;
-	align-items: center;
+  background-image: linear-gradient(to bottom, var(	--background-color-pink) 0%, var(	--background-color-pink) 40%, var(--main-white-color) 40%, var(--main-white-color) 100%);
+  display: flex;
+  align-items: center;
 
-	@include tab {
-		height: 257px;
-	}
+  @include tab {
+    height: 257px;
+  }
 
-	@include desk {
-		height: 422px;
-	}
+  @include desk {
+    height: 422px;
+  }
 }
 
 .gallery__container {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .gallery__image {
-	display: block;
-	width: 100%;
-	height: auto;
-	transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .gallery__column {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	&:first-child,
-	&:last-child {
-		align-items: center;
-		justify-content: center;
-	}
+  display: flex;
+  flex-direction: column;
+    &:first-of-type,
+    &:last-of-type {
+      justify-content: center;
+    }
 }
 
 .gallery__column:nth-child(2n + 3) {
-	transform: translateY(-10%);
+  transform: translateY(-10%);
 }
 
 .gallery__column:nth-last-child(2n + 3) {
-	transform: translateY(10%);
+  transform: translateY(10%);
 }
 
 .gallery__image-wrapper {
-	border-radius: 18%;
-	margin: 3px;
-	overflow: hidden;
-	transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
-	width: 40px;
-	height: 40px;
+  border-radius: 18%;
+  margin: 3px;
+  overflow: hidden;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 40px;
+  height: 40px;
+	
 	@include tab {
 		width: 85px;
-		height: 85px;
+    height: 85px;
 	}
+
 	@include desk {
 		width: 140px;
-		height: 140px;
+    height: 140px;
 	}
 }
 
 .gallery__image-wrapper:hover {
 	width: 80px;
-	height: 80px;
+  height: 80px;
 
 	@include tab {
 		width: 170px;
-		height: 170px;
+    height: 170px;
 	}
 
 	@include desk {
 		width: 280px;
-		height: 280px;
+    height: 280px;
 	}
 
-	& .gallery__image {
-		transform: scale(2);
-		transform-origin: top left;
-	}
+  & .gallery__image {
+    transform: scale(2);
+    transform-origin: top left;
+  }
 }
