@@ -31,7 +31,8 @@
 	@include mob {
 		padding: 40px;
 		width: 420px;
-		min-height: 735px;
+		min-height: 675px;
+		max-height: 735px;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) scale(1);
@@ -40,7 +41,7 @@
 		width: 480px;
 	}
 	@include desk {
-		min-height: 735px;
+		max-height: 735px;
 	}
 
 	background-color: var(--background-color);
@@ -110,7 +111,7 @@
 	&__textarea {
 		margin-bottom: 30px;
 		padding: 12px 16px;
-		height: 120px;
+		height: 60px;
 		@include font(12px, null, 1.17, 0.01em);
 		@include desk {
 			@include font(14px, null, 1.14, 0.01em);
