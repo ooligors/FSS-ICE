@@ -25,11 +25,11 @@
 }
 
 .gallery__column {
-  // border: 1px solid black;
-    &:first-child,
-    &:last-child {
-        display: flex;
-        align-items: center;
+  display: flex;
+  flex-direction: column;
+    &:first-of-type,
+    &:last-of-type {
+      justify-content: center;
     }
 }
 
