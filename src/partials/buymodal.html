@@ -1,60 +1,97 @@
 <div class="backdrop is-hidden" data-buymodal>
-    <div class="modal">
-        <button class="btn-close" aria-label="Закрыть окно заказа" data-buymodal-close>
-            <svg class="btn-close__icon">
-                <use href="images/icons.svg#icon-close"></use>
-            </svg>
-        </button>
-        <form class="modal__form" autocomplete="off">
-            <b class="modal__call">Your order</b>
-            <label for="user-name" class="modal__name-label">Your Name</label>
-            <div class="modal__input-containers">
-                <input type="text" name="name" id="user-name" class="modal__inputs modal__input-name"
-                    autocomplete="name">
-            </div>
-            <label for="user-phone-number" class="modal__name-label">Phone number</label>
-            <div class="modal__input-containers">
-                <input type="tel" name="phone-number" id="user-phone-number" class="modal__inputs modal__input-tel"
-                    autocomplete="tel">
-            </div>
-            <label for="user-email" class="modal__name-label">Mail</label>
-            <div class="modal__input-containers">
-                <input type="email" name="email" id="user-email" class="modal__inputs modal__input-email"
-                    autocomplete="email">
-            </div>
-            <label for="choose-product" class="modal__name-label">Choose product</label>
-            <div class="modal__input-containers">
-                <select class="modal__select" id="choose-product" name="select-product" required>
-                    <option disabled selected>Choose now or never!</option>
-                    <option value="value1">Icecream</option>
-                    <option value="value2">Icecoffee</option>
-                    <option value="value3">Milkshake</option>
-                </select>
-            </div>
-            <div class="modal__count-date-container">
-                <div class="modal__input-containers modal__flex-count-date">
-                    <label for="product-count" class="modal__name-label">Count</label>
-                    <div class="modal__input-containers">
-                        <input type="number" name="count" id="product-count" min="1" max="999" class="modal__input-count">
-                    </div>
-                </div>
-                <div class="modal__input-containers modal__flex-count-date">
-                    <label for="user-date" class="modal__name-label">Delivery date</label>
-                    <div class="modal__input-containers">
-                        <input type="date" name="delivery-date" id="user-date" class="modal__inputs modal__input-date">
-                    </div>
-                </div>
-                <div class="modal__input-containers">
-                    <label for="time" class="modal__name-label">Delivery time</label>
-                    <div class="modal__input-containers">
-                        <input type="time" name="delivery-time" id="time" class="modal__inputs modal__input-count">
-                    </div>
-                </div>
-            </div>
-            <label for="modal-textarea" class="modal__name-label">Comment</label>
-            <textarea name="comment" id="modal-textarea" rows="10" class="modal__textarea"
-                placeholder="your comment"></textarea>
-            <button type="submit" class="btn-primary modal__submit">Submit</button>
-        </form>
-    </div>
+	<div class="modal">
+		<button class="btn-close" aria-label="Закрыть окно заказа" data-buymodal-close>
+			<svg class="btn-close__icon">
+				<use href="images/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<form class="modal__form" autocomplete="off">
+			<b class="modal__call">Your order</b>
+			<label for="user-name" class="modal__name-label">Your Name</label>
+			<div class="modal__input-containers">
+				<input
+					type="text"
+					name="name"
+					id="user-name"
+					class="modal__inputs modal__input-name"
+					autocomplete="name"
+				/>
+			</div>
+			<label for="user-phone-number" class="modal__name-label">Phone number</label>
+			<div class="modal__input-containers">
+				<input
+					type="tel"
+					name="phone-number"
+					id="user-phone-number"
+					class="modal__inputs modal__input-tel"
+					autocomplete="tel"
+				/>
+			</div>
+			<label for="user-email" class="modal__name-label">Mail</label>
+			<div class="modal__input-containers">
+				<input
+					type="email"
+					name="email"
+					id="user-email"
+					class="modal__inputs modal__input-email"
+					autocomplete="email"
+				/>
+			</div>
+			<label for="choose-product" class="modal__name-label">Choose product</label>
+			<div class="modal__input-containers">
+				<select class="modal__select" id="choose-product" name="select-product" required>
+					<option value="value0" disabled selected>Choose now or never!</option>
+					<option value="value1">Icecream</option>
+					<option value="value2">Icecoffee</option>
+					<option value="value3">Milkshake</option>
+				</select>
+			</div>
+			<div class="modal__count-date-container">
+				<div class="modal__input-containers modal__flex-count-date">
+					<label for="product-count" class="modal__name-label">Count</label>
+					<div class="modal__input-containers">
+						<input
+							type="number"
+							name="count"
+							id="product-count"
+							min="1"
+							max="999"
+							class="modal__input-count"
+						/>
+					</div>
+				</div>
+				<div class="modal__input-containers modal__flex-count-date">
+					<label for="user-date" class="modal__name-label">Delivery date</label>
+					<div class="modal__input-containers">
+						<input
+							type="date"
+							name="delivery-date"
+							id="user-date"
+							class="modal__inputs modal__input-date"
+						/>
+					</div>
+				</div>
+				<div class="modal__input-containers">
+					<label for="time" class="modal__name-label">Delivery time</label>
+					<div class="modal__input-containers">
+						<input
+							type="time"
+							name="delivery-time"
+							id="time"
+							class="modal__inputs modal__input-count"
+						/>
+					</div>
+				</div>
+			</div>
+			<label for="modal-textarea" class="modal__name-label">Comment</label>
+			<textarea
+				name="comment"
+				id="modal-textarea"
+				rows="10"
+				class="modal__textarea"
+				placeholder="your comment"
+			></textarea>
+			<button type="submit" class="btn-primary modal__submit">Submit</button>
+		</form>
+	</div>
 </div>
