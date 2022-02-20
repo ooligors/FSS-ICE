@@ -2,7 +2,7 @@
 	padding-top: 125px;
 	padding-bottom: 39px;
 
-	background-color: #fff5f6;
+	background-color: var(--background-color-pink);
 
 	background-image: url('../images/about-milk-mob@1x.png');
 	background-repeat: no-repeat;
@@ -37,34 +37,16 @@
 .about__container {
 	width: 100%;
 
-	// background-image: url('../images/about-milk-mob@1x.png');
-	// background-repeat: no-repeat;
-	// background-position: 0% 85%;
-	// background-size: 100% 133px;
-
-	// @include x2() {
-	// 	background-image: url('../images/about-milk-mob@2x.png');
-	// }
-
 	@include mob() {
 		max-width: 480px;
 	}
 
 	@include tab() {
 		max-width: 768px;
-
-		// background-image: none;
 	}
 
 	@include desk() {
 		max-width: 1200px;
-
-		// @include x2() {
-		// 	background-image: url('../images/about-milk-desk@2x.png');
-		// 	background-repeat: no-repeat;
-		// 	background-position: 0% 107%;
-		// 	background-size: 100% 534px;
-		// }
 	}
 }
 
@@ -173,13 +155,14 @@
 }
 
 .about__text--prepend {
-	margin-bottom: 47px;
+	margin-bottom: 38px;
 
 	@include tab() {
 		margin-bottom: 30px;
 	}
 
 	@include desk() {
+		margin-bottom: 35px;
 		@include font($fs: 16px, $fw: null, $lh: 1.75, $ls: null);
 	}
 }
@@ -188,7 +171,12 @@
 	margin-bottom: 12px;
 	color: var(--main-gray-color);
 
+	@include tab() {
+		margin-bottom: 16px;
+	}
+
 	@include desk() {
+		margin-bottom: 30px;
 		@include font($fs: 14px, $fw: null, $lh: 1.93, $ls: null);
 	}
 }
@@ -214,17 +202,14 @@
 	color: var(--main-accent-color);
 	background-color: var(--main-white-color);
 
+	transition-property: background-color;
+	transition-duration: var(--primary-transition-duration);
+	transition-timing-function: var(--primary-transition-timing-function);
+
 	&:hover,
 	&:focus {
 		background-color: var(--background-accent-button);
 	}
-
-	// &::after {
-	// 	content: '>';
-
-	// 	margin-left: 14px;
-	// 	font-size: 17px;
-	// }
 }
 
 .about-button__icon {
