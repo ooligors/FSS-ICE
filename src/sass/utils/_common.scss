@@ -5,6 +5,11 @@ body {
 	letter-spacing: 0.04em;
 	background-color: var(--main-white-color);
 }
+* {
+	transition-property: background-color, transform, box-shadow, color, opacity, visibility, border;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 h1,
 h2,
@@ -46,10 +51,14 @@ img {
 	}
 
 	@include tab {
+		padding-left: 34px;
+		padding-right: 34px;
 		width: 768px;
 	}
 
 	@include desk {
+		padding-left: 75px;
+		padding-right: 75px;
 		width: 1200px;
 	}
 }
