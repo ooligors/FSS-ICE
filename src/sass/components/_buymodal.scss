@@ -23,7 +23,7 @@
 	position: absolute;
 	padding: 15px;
 	width: 80vw;
-	min-height: 93vh;
+	min-height: 600px;
 	top: 5%;
 	left: 50%;
 	bottom: 5%;
@@ -31,8 +31,6 @@
 	@include mob {
 		padding: 30px;
 		width: 400px;
-		min-height: 93vh;
-		max-height: 735px;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) scale(1);
