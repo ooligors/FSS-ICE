@@ -16,7 +16,11 @@
 			flex-wrap: wrap;
 		}
 		&__item {
-			margin-bottom: 38px;
+			&:not(:last-child) {
+				@media screen and (max-width: 767.9px) {
+					margin-bottom: 38px;
+				}
+			}
 			@include tab {
 				flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
 				margin: 15px;
