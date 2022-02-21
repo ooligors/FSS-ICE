@@ -34,17 +34,44 @@
 		<include src="./partials/footer.html"></include>
 		<include src="./partials/mob-menu.html"></include>
 		<include src="./partials/buymodal.html"></include>
+		<include src="./partials/modals.html"></include>
+		<include src="./partials/location.html"></include>
+		<include src="./partials/franchise.html"></include>
+		
+
 
 		<!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 		<script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
 		<script src="./slider.js"></script>
 		<script src="./buymodal.js"></script>
+
 		<script src="./buymodal1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"></script>
 		<script defer src="./mobile-menu.js"></script>
+    <script src="./franchise.js"></script>
+		<script src="./location.js"></script>
+		<script src="./modals.js"></script>
 
 		<script src="./index.js"></script>
+		<script>
+			// Initialize and add the map
+			function initMap() {
+				// The location of Uluru
+				const uluru = { lat: 42.0169957, lng: -87.6207211 };
+				// The map, centered at Uluru
+				const map = new google.maps.Map(document.getElementById("map"), {
+					zoom: 10,
+					center: uluru,
+				});
+				// The marker, positioned at Uluru
+				const marker = new google.maps.Marker({
+					position: uluru,
+					map: map,
+				});
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwC7zeDzJ1QbDXaxg3ycUVG8RVmWJUPVo&callback=initMap&libraries=&v=weekly"
+			async></script>
 	</body>
 </html>
