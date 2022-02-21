@@ -65,7 +65,7 @@
 		@include font(15px, null, 1.2, 0.01em);
 	}
 	&__inputs {
-		padding-left: 20px;
+		padding: 5px 10px;
 		height: 35px;
 		width: 100%;
 		border: 2px solid rgba(33, 33, 33, 0.2);
@@ -95,7 +95,7 @@
 		}
 	}
 	&__select {
-		padding-left: 20px;
+		padding: 5px 20px 5px 10px;
 		height: 40px;
 		width: 100%;
 		border: 2px solid rgba(33, 33, 33, 0.2);

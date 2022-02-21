@@ -35,13 +35,14 @@
 	}
 
 	&__menu-btn {
-		position: absolute;
+		position: fixed;
 		top: 25px;
 		right: 20px;
 		width: 20px;
 		height: 12px;
 		z-index: 2;
 		@include tab {
+			position: absolute;
 			top: 52px;
 			right: 224px;
 		}

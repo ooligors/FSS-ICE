@@ -1,4 +1,7 @@
 .backdrop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -19,24 +22,17 @@
 	}
 }
 .modal-three {
-	position: absolute;
+	position: relative;
 	padding: 15px;
 	width: 80vw;
 	min-height: 93vh;
-	top: 5%;
-	left: 100%;
-	bottom: 5%;
 	background-color: #ffa5ba;
 	border: 2px solid #d41443;
-	border-radius: 2%;
-	transform: translate(-50%, -1%) scale(1);
+	border-radius: 10px;
 	@include mob {
 		padding: 40px;
 		width: 420px;
 		min-height: 735px;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%) scale(1);
 	}
 	@include tab {
 		width: 480px;
@@ -49,8 +45,8 @@
 
 .btn-close-three {
 	position: absolute;
-	top: 25px;
-	right: 25px;
+	top: 5px;
+	right: 5px;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -77,8 +73,8 @@
 	font-family: Titan One;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 58px;
-	line-height: 66px;
+	font-size: 38px;
+	line-height: 1.2;
 	text-align: center;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
@@ -89,4 +85,7 @@
 	position: relative;
 	width: 100%;
 	height: 500px;
+	border-radius: 10px;
+	border: 2px solid var(--main-accent-color);
+	overflow: hidden;
 }
