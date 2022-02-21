@@ -134,13 +134,13 @@
 	text-transform: uppercase;
 	@include font(26px, 400, 1.15, 0.04em);
 	color: var(--main-white-color);
-	padding-bottom: 19px;
+	margin-bottom: 19px;
 	@include tab {
 		@include font(22px, 400, 1.14, 0.04em);
 	}
 	@include desk {
 		@include font(38px, 400, 1.16, 0.04em);
-		padding-bottom: 25px;
+		margin-bottom: 25px;
 	}
 }
 
