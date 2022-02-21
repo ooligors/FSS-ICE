@@ -6,7 +6,7 @@
 
 	background-image: url('../images/about-milk-mob@1x.png');
 	background-repeat: no-repeat;
-	background-position: 0% 85%;
+	background-position: center 85%;
 	background-size: 100% 133px;
 
 	@include x2() {
@@ -26,8 +26,8 @@
 
 		background-image: url('../images/about-milk-desk@1x.png');
 		background-repeat: no-repeat;
-		background-position: 0% 107%;
-		background-size: 100% 534px;
+		background-position: center 107%;
+		background-size: 1200px 534px;
 
 		@include x2() {
 			background-image: url('../images/about-milk-desk@2x.png');
