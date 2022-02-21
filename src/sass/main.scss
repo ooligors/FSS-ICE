@@ -2,7 +2,9 @@
 @import './mixins/@media-rules';
 @import './utils/variables';
 @import './utils/common';
-
+@import './components/franchise';
+@import './components/location';
+@import './components/modals';
 @import './components/hero-header';
 @import './components/products';
 @import './components/about';
