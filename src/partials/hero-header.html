@@ -1,4 +1,4 @@
-<header class="header-hero">
+<header class="header-hero" id="home">
 	<div class="container header-container">
 		<div class="header-container-body">
 			<nav class="page-nav">
@@ -9,19 +9,24 @@
 						alt="logo"
 					/>
 				</a>
-				<button type="button" class="page-nav__menu-btn" data-menu-open>
+				<button
+					type="button"
+					class="page-nav__menu-btn js-open-menu"
+					aria-expanded="false"
+					aria-controls="mob-menu"
+				>
 					<svg class="page-nav__burger">
 						<use href="./images/icons.svg#burger"></use>
 					</svg>
 				</button>
 				<ul class="site-nav list">
 					<li class="site-nav__item">
-						<a href="" class="site-nav__link site-nav__item--active">Home</a>
+						<a href="#home" class="site-nav__link site-nav__item--active">Home</a>
 					</li>
-					<li class="site-nav__item"><a href="" class="site-nav__link">Contact</a></li>
-					<li class="site-nav__item"><a href="" class="site-nav__link">How it’s made?</a></li>
-					<li class="site-nav__item"><a href="" class="site-nav__link">Our products</a></li>
-					<li class="site-nav__item"><a href="" class="site-nav__link">Contact</a></li>
+					<li class="site-nav__item"><a href="#about" class="site-nav__link">About us</a></li>
+					<li class="site-nav__item"><a href="#made" class="site-nav__link">How it’s made?</a></li>
+					<li class="site-nav__item"><a href="#products" class="site-nav__link">Our products</a></li>
+					<li class="site-nav__item"><a href="#contact" class="site-nav__link">Contact</a></li>
 				</ul>
 				<button type="button" class="page-nav__btn" data-buymodal-open>Buy now</button>
 			</nav>
@@ -31,8 +36,8 @@
 						ice cream<br />made with<br /><span class="hero-container__title--accent">passion</span>
 					</h1>
 					<div class="hero-header__btn">
-					<button type="button" class="hero__btn--accent">Products</button>
-					<button type="button" class="hero__btn">How it’s made?</button>
+						<a href="#products" class="hero__btn hero__btn--accent">Products</a>
+						<a href="#made" class="hero__btn">How it’s made?</a>
 					</div>
 				</div>
 				<picture class="hero-picture">

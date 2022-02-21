@@ -13,17 +13,27 @@
 		height: 665px;
 	}
 }
-
 .header-hero {
 	overflow: hidden;
 	background-color: var(--background-color);
 	width: 100%;
 }
-
+.header-logo {
+	@include desk {
+		margin-right: 110px;
+	}
+}
 .page-nav {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
+	@include desk {
+		position: absolute;
+		top: 37px;
+		left: 6px;
+		justify-content: flex-start;
+	}
+
 	&__menu-btn {
 		position: absolute;
 		top: 25px;
@@ -84,6 +94,7 @@
 		justify-content: space-between;
 		width: 541px;
 		z-index: 2;
+		margin-right: 110px;
 	}
 }
 
@@ -150,7 +161,9 @@
 }
 
 .hero__btn {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 83px;
 	height: 24px;
 	background-color: var(--main-white-color);
@@ -167,7 +180,7 @@
 		@include font(14px, 400, 1.28, null);
 	}
 	&--accent {
-		display: block;
+		// display: block;
 		width: 62px;
 		height: 24px;
 		background-color: var(--main-accent-color);
@@ -287,8 +300,8 @@
 	top: 96px;
 	right: 44px;
 	@include desk {
-		top: 160px;
-		right: 92px;
+		top: 156px;
+		right: 75px;
 	}
 	&::after {
 		content: '';
@@ -324,7 +337,7 @@
 	right: 42px;
 	@include desk {
 		top: 248px;
-		right: 92px;
+		right: 75px;
 	}
 	&::after {
 		content: '';

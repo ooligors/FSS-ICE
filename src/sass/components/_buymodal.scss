@@ -23,28 +23,27 @@
 	position: absolute;
 	padding: 15px;
 	width: 80vw;
-	min-height: 93vh;
+	min-height: 600px;
 	top: 5%;
 	left: 50%;
 	bottom: 5%;
 	transform: translate(-50%, -1%) scale(1);
 	@include mob {
-		padding: 40px;
-		width: 420px;
-		min-height: 735px;
+		padding: 30px;
+		width: 400px;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) scale(1);
 	}
 	@include tab {
-		width: 480px;
+		width: 450px;
 	}
 	@include desk {
-		min-height: 735px;
+		max-height: 735px;
 	}
 
 	background-color: var(--background-color);
-	border-radius: 70px;
+	border-radius: 40px;
 	&__form {
 		display: flex;
 		flex-direction: column;
@@ -53,7 +52,7 @@
 		text-align: center;
 		margin-bottom: 12px;
 
-		@include font(30px, 700, 1.5, null);
+		@include font(24px, 700, 1.5, null);
 		@include desk {
 			@include font(30px, 700, 1.15, null);
 		}
@@ -67,7 +66,7 @@
 	}
 	&__inputs {
 		padding-left: 20px;
-		height: 40px;
+		height: 35px;
 		width: 100%;
 		border: 2px solid rgba(33, 33, 33, 0.2);
 		border-radius: 25px;
@@ -80,7 +79,7 @@
 	&__input {
 		&-containers {
 			position: relative;
-			margin-bottom: 15px;
+			margin-bottom: 7px;
 		}
 		&-count {
 			text-align: center;
@@ -110,7 +109,7 @@
 	&__textarea {
 		margin-bottom: 30px;
 		padding: 12px 16px;
-		height: 120px;
+		height: 60px;
 		@include font(12px, null, 1.17, 0.01em);
 		@include desk {
 			@include font(14px, null, 1.14, 0.01em);
@@ -140,7 +139,7 @@
 		&:hover,
 		&:focus {
 			background-color: var(--secondary-accent-color);
-			box-shadow: 0px 15px 15px rgba(255, 255, 255, 0.8);
+			box-shadow: 0px 7px 7px rgba(255, 255, 255, 0.8);
 		}
 	}
 	&__count-date-container {
@@ -151,15 +150,18 @@
 		}
 	}
 	&__flex-count-date {
+		@include mob {
+			margin-right: 7px;
+		}
 		@include tab {
-			margin-right: 37px;
+			margin-right: 32px;
 		}
 	}
 }
 .btn-close {
 	position: absolute;
-	top: 25px;
-	right: 25px;
+	top: 15px;
+	right: 15px;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
@@ -170,8 +172,9 @@
 	transition-duration: 0ms;
 	&:hover,
 	&:focus {
-		color: var(--background-color);
-		border-color: var(--background-color);
+		color: var(--secondary-accent-color);
+		border-color: var(--secondary-accent-color);
+		box-shadow: 0px 0px 10px #c7133e70;
 	}
 	&__icon {
 		position: absolute;

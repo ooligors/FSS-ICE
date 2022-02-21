@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'DM Sans', sans-serif;
 	color: var(--main-black-color);
@@ -51,10 +54,14 @@ img {
 	}
 
 	@include tab {
+		padding-left: 34px;
+		padding-right: 34px;
 		width: 768px;
 	}
 
 	@include desk {
+		padding-left: 75px;
+		padding-right: 75px;
 		width: 1200px;
 	}
 }
