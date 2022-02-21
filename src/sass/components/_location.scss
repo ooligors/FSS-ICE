@@ -42,7 +42,8 @@
 		width: 480px;
 	}
 	@include desk {
-		min-height: 735px;
+		max-height: 80vh;
+		width: 60vw;
 	}
 }
 
