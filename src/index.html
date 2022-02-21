@@ -53,7 +53,26 @@
 
 		<script src="./index.js"></script>
 
+		<script
+			src="//maps.googleapis.com/maps/api/js?key=AIzaSyAwC7zeDzJ1QbDXaxg3ycUVG8RVmWJUPVo&callback=GoogleReadyHandler5hnzdsz2"
+			async
+			defer
+		></script>
 		<script>
+			function GoogleReadyHandler5hnzdsz2() {
+				var infoWindow,
+					map = new google.maps.Map(document.getElementById('map'), {
+						center: { lat: 39.6775943, lng: -87.9615518 },
+						zoom: 10,
+						disableDefaultUI: true,
+						zoomControl: true,
+						mapTypeControl: true,
+						mapTypeId: 'roadmap',
+					});
+				return map;
+			}
+		</script>
+		<!-- <script>
 			// Initialize and add the map
 			function initMap() {
 				// The location of Uluru
@@ -71,6 +90,6 @@
 			}
 		</script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwC7zeDzJ1QbDXaxg3ycUVG8RVmWJUPVo"></script>
-		<!-- &libraries=&v=weekly -->
+		&libraries=&v=weekly -->
 	</body>
 </html>
