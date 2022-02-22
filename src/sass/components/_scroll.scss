@@ -1,7 +1,7 @@
 .scroll {
 	position: fixed;
-	bottom: 30px;
-	right: 25px;
+	bottom: 15px;
+	right: 20px;
 
 	width: 40px;
 
@@ -22,6 +22,15 @@
 	&:hover,
 	&:focus {
 		transform: scale(1.1);
+		background-color: var(--background-color);
+	}
+
+	@include tab() {
+		bottom: 30px;
+		right: 25px;
+
+		width: 40px;
+		line-height: 40px;
 	}
 
 	@include desk() {
