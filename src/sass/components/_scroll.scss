@@ -3,13 +3,13 @@
 	bottom: 30px;
 	right: 25px;
 
-	width: 42px;
+	width: 40px;
 
 	visibility: hidden;
 	opacity: 0;
 
 	font-size: 20px;
-	line-height: 42px;
+	line-height: 40px;
 
 	border: none;
 	border-radius: 50%;
@@ -17,15 +17,29 @@
 
 	background-color: rgba(253, 239, 244, 0.89);
 
+	transition: cubic-bezier(0.3, 0.6, 0.82, 0.75);
+
 	&:hover,
 	&:focus {
 		transform: scale(1.1);
+	}
+
+	@include desk() {
+		bottom: 50px;
+		right: 55px;
+
+		width: 42px;
+		line-height: 42px;
 	}
 }
 
 .scroll-visible {
 	visibility: visible;
 	opacity: 1;
+
+	animation-name: animation-btn;
+	animation-duration: 500ms;
+	animation-timing-function: linear;
 }
 
 .scroll__icon {
