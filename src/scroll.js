@@ -1,19 +1,25 @@
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-const rootElement = document.documentElement;
+const scrollToTopBtn = document.getElementById("scrollToTopBtn"); // получаем обьект кнопки из html документа по id
+const rootElement = document.documentElement; // получаем корневой документ html
 
-function scrollToTop() {
-    rootElement.scrollTo({
+function scrollToTop() { // функция-обработчик нажатия на кнопку
+    
+    rootElement.scrollTo({ // вызов js api (функции) для перемещения скролла в позицию 0 - от начала документа
         top: 0,
-        behavior: "smooth"
+        behavior: "smooth" // параметр плавной прокрутки
     })
 }
-scrollToTopBtn.addEventListener("click", scrollToTop);
 
-function scrollEvent() {
-    if ( window.pageYOffset > 300 ) {
-        scrollToTopBtn.classList.add("scroll-visible");
+scrollToTopBtn.addEventListener("click", scrollToTop); // добавляем функцию-обработчик на click event (событие) кнопки 
+
+function scrollEvent() { // функция-обработчик событий скролла. скролл - это любая прокрутка колесика мышки на странице
+    
+    if (window.pageYOffset > 300) { // каждый скролл проверяем есть ли 300рх от начала сайта / страницы
+        scrollToTopBtn.classList.add("scroll-visible"); // если да - добавляем 
     } else {
-        scrollToTopBtn.classList.remove("scroll-visible");
+        scrollToTopBtn.classList.remove("scroll-visible"); // если нет - удаляем
     }
 }
-window.addEventListener("scroll", scrollEvent);
+
+window.addEventListener("scroll", scrollEvent); // window - это все окно. задаем функцию-обработчик события скролла на все окно сайта
+
+// каждый раз при прокрутке колесиком будет вызываться функция обработчик scrollEvent
