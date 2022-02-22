@@ -86,3 +86,13 @@ button {
 	border: none;
 	outline: none;
 }
+
+@keyframes animation-btn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
