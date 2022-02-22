@@ -31,13 +31,13 @@
 	@include mob {
 		padding: 40px;
 		width: 420px;
-		min-height: 735px;
+		max-height: 735px;
 	}
 	@include tab {
 		width: 480px;
 	}
 	@include desk {
-		min-height: 735px;
+		max-height: 735px;
 	}
 }
 
