@@ -190,6 +190,8 @@
 	display: flex;
 	justify-content: center;
 
+	position: relative;
+
 	width: 176px;
 	height: 44px;
 
@@ -206,6 +208,15 @@
 	transition-property: background-color;
 	transition-duration: var(--primary-transition-duration);
 	transition-timing-function: var(--primary-transition-timing-function);
+
+	&::after {
+		content: '\276F';
+		font-size: 12px;
+		position: absolute;
+		top: 15px;
+		right: 33px;
+		color: var(--main-accent-color);
+	}
 
 	&:hover,
 	&:focus {
