@@ -253,18 +253,18 @@
 	color: var(--main-white-color);
 	padding-left: 41px;
 	padding-right: 39px;
-	margin-bottom: 30px;
+	padding-bottom: 111px;
 	@include tab() {
 		@include font(14px, bold, 1.8, 0.04em);
 		padding-left: 11px;
 		padding-right: 11px;
-		margin-bottom: 40px;
+		padding-bottom: 120px;
 	}
 	@include desk() {
 		@include font(16px, bold, 1.8, 0.04em);
 		padding-left: 44px;
 		padding-right: 44px;
-		margin-bottom: 62px;
+		padding-bottom: 152px;
 	}
 }
 .product-button {
@@ -274,8 +274,15 @@
 
 .product-summary {
 	display: block;
-	position: relative;
-	padding-bottom: 90px;
+	position: absolute;
+	bottom: 50px;
+	padding-bottom: 41px;
+	@include tab {
+		padding-bottom: 40px;
+	}
+	@include desk {
+		padding-bottom: 50px;
+	}
 }
 
 .product-summary::-webkit-details-marker {
@@ -315,6 +322,9 @@
 	}
 }
 .product-datails {
+	bottom: 0;
+
+	position: absolute;
 	padding-left: 41px;
 	padding-right: 39px;
 }
